@@ -1,0 +1,145 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+}
+
+.is-hidden {
+  display: none;
+}
+
+.video_disc {
+  overflow: hidden;
+  position: relative;
+  width: 500px;
+  height: 500px;
+  margin: 60px auto 20px;
+  border-radius: 100%;
+  box-shadow: 0 0 20px rgba(255, 127, 80, 0.8);
+}
+
+.video_disc_time {
+  position: absolute;
+  z-index: 1;
+  top:  10px;
+  left: 50%;
+  width: 600px;
+  height: 600px;
+  background-color: red;
+  border-radius: 100%;
+  transform: translateX(-50%);
+}
+
+video {
+  position: relative;
+  z-index: 5;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  animation: rotation 30s infinite linear;
+}
+
+.play,
+.pause {
+  position: absolute;
+  z-index: 10;
+  top: 50%;
+  left: 50%;
+  width: 100px;
+  height: 100px;
+  transform: translate(-50%, -50%);
+  background-color: black;
+  border-radius: 100%;
+  border: 0;
+  color: white;
+  font-size: 32px;
+}
+
+.player.playing {
+  background: url('Rickrolling-PNG-Photos.png') repeat;
+  background-size: 100px 100px;
+}
+
+.video_controls {
+  text-align: center;
+}
+
+.video_btn {
+  cursor: pointer;
+  padding: 10px 16px;
+  margin-right: 20px;
+  background-color: coral;
+  border: none;
+  border-radius: 20px;
+  min-width: 100px;
+  font-size: 20px;
+}
+
+.video_time {
+  margin-top: 1.9em;
+  text-align: center;
+  font-size: 20px;
+  color: white;
+  padding: 20px;
+}
+
+.video_volume {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: fixed;
+  top: 50%;
+  left: 40px;
+  height: 300px;
+  background-color: white;
+  width: 40px;
+  transform: translateY(-50%);
+}
+
+.video_volume_value {
+  width: 100%;
+  height: 0%;
+  background-color: coral;
+}
+
+@keyframes heartbeat
+{
+  0%
+  {
+    transform: scaleY( .75 );
+  }
+  20%
+  {
+    transform: scaleY( 1 );
+  }
+  40%
+  {
+    transform: scaleY( .75 );
+  }
+  60%
+  {
+    transform: scaleY( 1 );
+  }
+  80%
+  {
+    transform: scaleY( .75 );
+  }
+  100%
+  {
+    transform: scaleY( .75 );
+  }
+}
+
+@keyframes rotation {
+  from {
+    transform: scale(2.8) rotate(0deg);
+  }
+  to {
+    transform: scale(2.8) rotate(359deg);
+  }
+}
